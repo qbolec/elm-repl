@@ -32,7 +32,7 @@ source-repository head
 
 Executable elm-repl
   ghc-options:
-    -W
+    -W -fprof-auto "-with-rtsopts=-N -p -s -h -i0.1"
 
   Hs-Source-Dirs:
     src
@@ -71,7 +71,7 @@ Test-Suite test
     exitcode-stdio-1.0
 
   ghc-options:
-    -W
+    -W -fprof-auto "-with-rtsopts=-N -p -s -h -i0.1"
 
   Hs-Source-Dirs:
     tests, src
